@@ -18,7 +18,7 @@
   </a>
   <a href="https://github.com/highsuns-projects/github-readme-stats">
     <img 
-      src="http://github-readme-stats-five-psi-67.vercel.app/api/top-langs/?username=highsun&layout=compact&langs_count=8&card_width=455&theme=swift&hide_border=true" 
+      src="http://github-readme-stats-five-psi-67.vercel.app/api/top-langs/?username=highsun&layout=compact&langs_count=8&theme=swift&hide_border=true" 
       alt="Top Langs" 
       height="195"
     />
