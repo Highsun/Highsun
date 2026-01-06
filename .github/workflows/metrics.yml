@@ -4,7 +4,7 @@ on:
   schedule: [{cron: "0 0 * * *"}]
   # 支持手动触发更新
   workflow_dispatch:
-  # 当你往这个仓库推代码时也触发更新
+  # 往这个仓库推代码时也触发更新
   push: {branches: ["master", "main"]}
 
 jobs:
@@ -20,19 +20,23 @@ jobs:
           # 基础设置
           user: Highsun
           template: classic
-          base: header, repositories
+          
+          # 【精简】base 设为空，隐藏头像、用户信息等重复内容
+          base: ""
 
           # 核心功能：语言统计插件
           plugin_languages: yes
-          plugin_languages_ignored: html, css, tex  # 过滤掉不想展示的辅助语言
-          plugin_languages_skipped: my-test-repo    # 跳过某些特定的仓库
+          # 过滤掉非编程语言的辅助文件
+          plugin_languages_ignored: html, css, tex, mako, dockerfile, markdown, json, yaml
+          # 【跳过仓库】屏蔽部分仓库
+          plugin_languages_skipped: snk
           
           # 排行与细节设置
-          plugin_languages_details: bytes-size, percentage # 同时显示代码字节大小和百分比
-          plugin_languages_limit: 8                        # 最多显示 8 种语言
-          plugin_languages_sections: most-used             # 显示最常用的语言
-          plugin_languages_threshold: 0%                   # 占比超过 0% 的都显示
+          plugin_languages_details: percentage            # 显示百分比
+          plugin_languages_limit: 8                       # 最多显示 8 种语言
+          plugin_languages_sections: most-used            # 显示最常用的语言
+          plugin_languages_threshold: 0%                  # 只有一点点占比的语言也显示
           
-          # 美化
-          plugin_languages_colors: github                  # 使用 GitHub 官方的语言颜色
-          config_timezone: Asia/Shanghai                   # 设置时区
+          # 美化与时区
+          plugin_languages_colors: github                 # 使用 GitHub 官方语言颜色
+          config_timezone: Asia/Shanghai
