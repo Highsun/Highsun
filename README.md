@@ -6,6 +6,8 @@
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+![My GitHub Metrics](github-metrics.svg)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Highsun/snk/raw/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Highsun/snk/raw/output/github-snake.svg" />
