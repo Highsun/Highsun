@@ -1,7 +1,7 @@
 name: Metrics
 on:
-  # 每天 6:48 自动更新
-  schedule: [{cron: "48 6 * * *"}]
+  # 北京时间每天 04:13 自动更新
+  schedule: [{cron: "13 20 * * *"}]
   # 支持手动触发更新
   workflow_dispatch:
   # 往这个仓库推代码时也触发更新
